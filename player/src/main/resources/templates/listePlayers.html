@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" type="text/css"
+href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" />
+<head>
+<meta charset="utf-8">
+<title>List of Players</title>
+</head>
+<body>
+<div class="container mt-5">
+<div class="card">
+ <div class="card-header">
+ List of Players
+ </div>
+ <div class="card-body">
+
+ <table class="table table-striped">
+ <tr>
+ <th>ID</th><th>Nom Player</th><th>Score</th>
+ </tr>
+ <tr th:each="p:${Players}">
+ <td th:text="${p.idPlayer}"></td>
+ <td th:text="${p.nomPLayer}"></td>
+ <td th:text="${p.scorePLayer}"></td>
+ </tr>
+ </table>
+ </div>
+</div>
+</div>
+</body>
+</html>
